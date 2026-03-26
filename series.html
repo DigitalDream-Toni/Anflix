@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anflix | Series</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="assets/logo.svg" alt="Anflix logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Anflix</div>
+        <div class="brand-tag">Stream - Download</div>
+      </div>
+    </div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Search series, episodes..." aria-label="Search" />
+      <button id="searchButton" type="button">Search</button>
+    </div>
+    <div class="quick-links"></div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a class="active" href="series.html">Series</a>
+    <a href="trailers.html">Trailers</a>
+    <a href="music.html">Music</a>
+  </nav>
+
+  <section class="notice">
+    <div class="notice-card">
+      <div class="notice-title">Series Spotlight</div>
+      <div class="notice-text">Binge-worthy seasons, fresh drops, and episode highlights.</div>
+      <div class="notice-actions">
+        <button>Browse Series</button>
+        <button class="ghost">Top Episodes</button>
+      </div>
+    </div>
+    <div class="notice-grid">
+      <div class="stat">
+        <div class="stat-number">410</div>
+        <div class="stat-label">Active shows</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">68</div>
+        <div class="stat-label">New episodes</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4K</div>
+        <div class="stat-label">Ultra HD picks</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="layout">
+    <section class="content">
+      <div id="noResults" class="no-results" aria-live="polite">
+        No matches found. Try a different title.
+      </div>
+      <div class="section-head">
+        <h2>Latest Series</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="grid" data-search-group="series">
+        <article class="card" data-title="Pulse City">
+          <div class="poster p1"></div>
+          <div class="card-body">
+            <div class="card-title">Pulse City</div>
+            <div class="card-meta">S02E07 - 48m</div>
+            <div class="card-actions">
+              <button>Stream</button>
+              <button class="ghost">Download</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-title="Midnight Lines">
+          <div class="poster p2"></div>
+          <div class="card-body">
+            <div class="card-title">Midnight Lines</div>
+            <div class="card-meta">S01E10 - 52m</div>
+            <div class="card-actions">
+              <button>Stream</button>
+              <button class="ghost">Download</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-title="Forest Wardens">
+          <div class="poster p3"></div>
+          <div class="card-body">
+            <div class="card-title">Forest Wardens</div>
+            <div class="card-meta">S03E03 - 44m</div>
+            <div class="card-actions">
+              <button>Stream</button>
+              <button class="ghost">Download</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-head">
+        <h2>Popular Episodes</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="list" data-search-group="episodes">
+        <article class="row" data-title="Arcadia Nights">
+          <div class="thumb t1"></div>
+          <div class="row-body">
+            <div class="row-title">Arcadia Nights (S01E04)</div>
+            <div class="row-meta">Drama - 51m - HD</div>
+            <div class="row-actions">
+              <button>Stream</button>
+              <button class="ghost">Download</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">HOT</div>
+        </article>
+
+        <article class="row" data-title="Signal Ridge">
+          <div class="thumb t2"></div>
+          <div class="row-body">
+            <div class="row-title">Signal Ridge (S02E01)</div>
+            <div class="row-meta">Thriller - 46m - HD</div>
+            <div class="row-actions">
+              <button>Stream</button>
+              <button class="ghost">Download</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">NEW</div>
+        </article>
+
+        <article class="row" data-title="City Lab">
+          <div class="thumb t3"></div>
+          <div class="row-body">
+            <div class="row-title">City Lab (S04E09)</div>
+            <div class="row-meta">Sci-Fi - 49m - HD</div>
+            <div class="row-actions">
+              <button>Stream</button>
+              <button class="ghost">Download</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">TREND</div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="side-card">
+        <div class="side-title">Genres</div>
+        <div class="chips">
+          <a href="#">Drama</a>
+          <a href="#">Thriller</a>
+          <a href="#">Comedy</a>
+          <a href="#">Romance</a>
+          <a href="#">Crime</a>
+          <a href="#">Sci-Fi</a>
+          <a href="#">Fantasy</a>
+          <a href="#">Docu-series</a>
+        </div>
+      </div>
+
+      <div class="side-card" data-search-group="top-downloads">
+        <div class="side-title">Top Downloads</div>
+        <div class="side-list">
+          <div class="side-item" data-title="Noir Signal">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Noir Signal</div>
+              <div class="side-meta">HD - 1.2GB</div>
+            </div>
+          </div>
+          <div class="side-item" data-title="Vast Tide">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Vast Tide</div>
+              <div class="side-meta">HD - 1.4GB</div>
+            </div>
+          </div>
+          <div class="side-item" data-title="Arc Lane">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Arc Lane</div>
+              <div class="side-meta">HD - 1.1GB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <div class="side-title">Newsletter</div>
+        <p class="side-text">Get weekly drops and curated downloads.</p>
+        <div class="side-form">
+          <input type="email" placeholder="Email address" />
+          <button>Join</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div>(c) 2026 Anflix. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">DMCA</a>
+      <a href="#">Contact</a>
+      <a href="#">Advertise</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

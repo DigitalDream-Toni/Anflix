@@ -3,210 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anflix | Movies, Series & Downloads</title>
+  <title>Anflix | Home</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-glow"></div>
   <header class="topbar">
     <div class="brand">
-      <div class="brand-mark">A</div>
+      <div class="brand-mark">
+        <img src="assets/logo.svg" alt="Anflix logo" />
+      </div>
       <div class="brand-text">
         <div class="brand-name">Anflix</div>
-        <div class="brand-tag">Stream - Download - Save</div>
+        <div class="brand-tag">Stream - Download</div>
       </div>
     </div>
     <div class="search">
-      <input type="search" placeholder="Search movies, series, trailers..." aria-label="Search" />
-      <button type="button">Search</button>
+      <input id="searchInput" type="search" placeholder="Search the library..." aria-label="Search" />
+      <button id="searchButton" type="button">Search</button>
     </div>
-    <div class="quick-links">
-      <a href="#">Login</a>
-      <a class="pill" href="#">Upload</a>
-    </div>
+    <div class="quick-links"></div>
   </header>
 
   <nav class="main-nav">
-    <a class="active" href="#">Home</a>
-    <a href="#">Movies</a>
-    <a href="#">Series</a>
-    <a href="#">Trailers</a>
-    <a href="#">Music</a>
-    <a href="#">Comedy</a>
-    <a href="#">Sports</a>
-    <a href="#">News</a>
-    <a href="#">How-To</a>
+    <a class="active" href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="series.html">Series</a>
+    <a href="trailers.html">Trailers</a>
+    <a href="music.html">Music</a>
   </nav>
 
   <section class="notice">
     <div class="notice-card">
-      <div class="notice-title">Hot Right Now</div>
-      <div class="notice-text">Get the newest releases, fast streaming, and direct downloads.</div>
+      <div class="notice-title">Welcome Back</div>
+      <div class="notice-text">Jump into movies, series, trailers, and music — all in one place.</div>
       <div class="notice-actions">
-        <button>Browse Latest</button>
-        <button class="ghost">Top Downloads</button>
+        <button>Start Watching</button>
+        <button class="ghost">Explore Library</button>
       </div>
     </div>
     <div class="notice-grid">
       <div class="stat">
-        <div class="stat-number">2.8K</div>
-        <div class="stat-label">Today's uploads</div>
+        <div class="stat-number">4.3K</div>
+        <div class="stat-label">New additions</div>
       </div>
       <div class="stat">
-        <div class="stat-number">98%</div>
-        <div class="stat-label">HD-ready</div>
+        <div class="stat-number">1.2M</div>
+        <div class="stat-label">Total plays</div>
       </div>
       <div class="stat">
-        <div class="stat-number">24/7</div>
-        <div class="stat-label">Availability</div>
+        <div class="stat-number">5</div>
+        <div class="stat-label">Content hubs</div>
       </div>
     </div>
   </section>
 
-  <main class="layout">
-    <section class="content">
-      <div class="section-head">
-        <h2>Latest Movies</h2>
-        <a href="#">See all</a>
-      </div>
-      <div class="list">
-        <article class="row">
-          <div class="thumb t1"></div>
-          <div class="row-body">
-            <div class="row-title">Crimson Harbor (2026)</div>
-            <div class="row-meta">Action - 2h 11m - HD</div>
-            <div class="row-actions">
-              <button>Stream</button>
-              <button class="ghost">Download</button>
-              <button class="ghost">Save</button>
-            </div>
-          </div>
-          <div class="row-badge">NEW</div>
-        </article>
+  <main class="home">
+    <div id="noResults" class="no-results" aria-live="polite">
+      No matches found. Try a different title.
+    </div>
 
-        <article class="row">
-          <div class="thumb t2"></div>
-          <div class="row-body">
-            <div class="row-title">Glass Orbit (2026)</div>
-            <div class="row-meta">Sci-Fi - 1h 58m - HD</div>
-            <div class="row-actions">
-              <button>Stream</button>
-              <button class="ghost">Download</button>
-              <button class="ghost">Save</button>
-            </div>
-          </div>
-          <div class="row-badge">TRENDING</div>
-        </article>
-
-        <article class="row">
-          <div class="thumb t3"></div>
-          <div class="row-body">
-            <div class="row-title">Riverlight (2025)</div>
-            <div class="row-meta">Drama - 2h 02m - HD</div>
-            <div class="row-actions">
-              <button>Stream</button>
-              <button class="ghost">Download</button>
-              <button class="ghost">Save</button>
-            </div>
-          </div>
-          <div class="row-badge">UPDATED</div>
-        </article>
+    <section class="home-hero">
+      <div class="home-hero-text">
+        <div class="home-kicker">All-in-one entertainment hub</div>
+        <h1>Stream big, discover fast, save what matters.</h1>
+        <p>Movies, series, trailers, and music — organized for speed and built for binge.</p>
+        <div class="home-hero-actions">
+          <button>Start Watching</button>
+          <button class="ghost">Explore Categories</button>
+        </div>
       </div>
-
-      <div class="section-head">
-        <h2>Latest Series</h2>
-        <a href="#">See all</a>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="poster p1"></div>
-          <div class="card-body">
-            <div class="card-title">Pulse City</div>
-            <div class="card-meta">S02E07 - 48m</div>
-            <div class="card-actions">
-              <button>Stream</button>
-              <button class="ghost">Download</button>
-            </div>
+      <div class="home-hero-panel" data-title="Today Highlight">
+        <div class="home-hero-card">
+          <div class="home-hero-label">Today Highlight</div>
+          <div class="home-hero-title">Crimson Harbor</div>
+          <div class="home-hero-meta">Action - 2h 11m - HD</div>
+          <div class="home-hero-actions">
+            <button>Stream</button>
+            <button class="ghost">Save</button>
           </div>
-        </article>
-        <article class="card">
-          <div class="poster p2"></div>
-          <div class="card-body">
-            <div class="card-title">Midnight Lines</div>
-            <div class="card-meta">S01E10 - 52m</div>
-            <div class="card-actions">
-              <button>Stream</button>
-              <button class="ghost">Download</button>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="poster p3"></div>
-          <div class="card-body">
-            <div class="card-title">Forest Wardens</div>
-            <div class="card-meta">S03E03 - 44m</div>
-            <div class="card-actions">
-              <button>Stream</button>
-              <button class="ghost">Download</button>
-            </div>
-          </div>
-        </article>
+        </div>
+        <div class="home-hero-mosaic">
+          <div class="mosaic-tile t1"></div>
+          <div class="mosaic-tile t2"></div>
+          <div class="mosaic-tile t3"></div>
+        </div>
       </div>
     </section>
 
-    <aside class="sidebar">
-      <div class="side-card">
-        <div class="side-title">Categories</div>
-        <div class="chips">
-          <a href="#">Action</a>
-          <a href="#">Thriller</a>
-          <a href="#">Comedy</a>
-          <a href="#">Romance</a>
-          <a href="#">Horror</a>
-          <a href="#">Documentary</a>
-          <a href="#">Anime</a>
-          <a href="#">Hollywood</a>
-          <a href="#">Bollywood</a>
-          <a href="#">K-Drama</a>
-        </div>
-      </div>
+    <section class="home-panels" data-search-group="hubs">
+      <article class="panel" data-title="Movies Hub">
+        <div class="panel-title">Movies Hub</div>
+        <div class="panel-text">Blockbusters, classics, and new releases every day.</div>
+        <button>Explore Movies</button>
+      </article>
+      <article class="panel" data-title="Series Hub">
+        <div class="panel-title">Series Hub</div>
+        <div class="panel-text">Fresh episodes, complete seasons, and exclusives.</div>
+        <button>Explore Series</button>
+      </article>
+      <article class="panel" data-title="Trailers Hub">
+        <div class="panel-title">Trailers Hub</div>
+        <div class="panel-text">Teasers, official trailers, and first looks.</div>
+        <button>Explore Trailers</button>
+      </article>
+      <article class="panel" data-title="Music Hub">
+        <div class="panel-title">Music Hub</div>
+        <div class="panel-text">Music videos, live sets, and curated playlists.</div>
+        <button>Explore Music</button>
+      </article>
+    </section>
 
-      <div class="side-card">
-        <div class="side-title">Top Downloads</div>
-        <div class="side-list">
-          <div class="side-item">
-            <div class="mini"></div>
-            <div>
-              <div class="side-name">Noir Signal</div>
-              <div class="side-meta">HD - 1.7GB</div>
-            </div>
-          </div>
-          <div class="side-item">
-            <div class="mini"></div>
-            <div>
-              <div class="side-name">Vast Tide</div>
-              <div class="side-meta">HD - 1.4GB</div>
-            </div>
-          </div>
-          <div class="side-item">
-            <div class="mini"></div>
-            <div>
-              <div class="side-name">Arc Lane</div>
-              <div class="side-meta">HD - 1.9GB</div>
-            </div>
-          </div>
-        </div>
+    <section class="home-strip">
+      <div class="strip-card" data-title="Pulse City">
+        <div class="strip-title">Pulse City</div>
+        <div class="strip-meta">Series - S02E07</div>
       </div>
+      <div class="strip-card" data-title="Neon Waves">
+        <div class="strip-title">Neon Waves</div>
+        <div class="strip-meta">Music - 3m 12s</div>
+      </div>
+      <div class="strip-card" data-title="Glass Orbit">
+        <div class="strip-title">Glass Orbit</div>
+        <div class="strip-meta">Movie - 1h 58m</div>
+      </div>
+      <div class="strip-card" data-title="Riverlight">
+        <div class="strip-title">Riverlight</div>
+        <div class="strip-meta">Movie - 2h 02m</div>
+      </div>
+    </section>
 
-      <div class="side-card">
-        <div class="side-title">Newsletter</div>
-        <p class="side-text">Get weekly drops and curated downloads.</p>
-        <div class="side-form">
-          <input type="email" placeholder="Email address" />
-          <button>Join</button>
+    <section class="home-collections">
+      <div class="collection">
+        <div class="collection-title">Your Queue</div>
+        <div class="collection-list" data-search-group="queue">
+          <div class="collection-item" data-title="Arc Lane">Arc Lane</div>
+          <div class="collection-item" data-title="Midnight Lines">Midnight Lines</div>
+          <div class="collection-item" data-title="Forest Wardens">Forest Wardens</div>
+          <div class="collection-item" data-title="Atlas Core">Atlas Core</div>
         </div>
       </div>
-    </aside>
+      <div class="collection">
+        <div class="collection-title">Top Downloads</div>
+        <div class="collection-list" data-search-group="downloads">
+          <div class="collection-item" data-title="Noir Signal">Noir Signal</div>
+          <div class="collection-item" data-title="Vast Tide">Vast Tide</div>
+          <div class="collection-item" data-title="Signal North">Signal North</div>
+          <div class="collection-item" data-title="City Bloom">City Bloom</div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">

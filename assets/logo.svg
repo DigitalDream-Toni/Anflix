@@ -1,0 +1,5 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Anflix logo">
+  <rect width="256" height="256" rx="40" fill="#0b0f14"/>
+  <path fill="#ffffff" d="M128 32c-6 0-12 4-15 10L40 208c-4 9 2 20 12 20h34c7 0 13-4 16-10l18-44h56l18 44c3 6 9 10 16 10h34c10 0 16-11 12-20L143 42c-3-6-9-10-15-10Zm0 52 22 58h-44l22-58Z"/>
+  <path fill="#0b0f14" d="M128 104 116 136h24l-12-32Z"/>
+</svg>

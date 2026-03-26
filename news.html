@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anflix | News</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="assets/logo.svg" alt="Anflix logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Anflix</div>
+        <div class="brand-tag">Stream - Download</div>
+      </div>
+    </div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Search news..." aria-label="Search" />
+      <button id="searchButton" type="button">Search</button>
+    </div>
+    <div class="quick-links"></div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Movies</a>
+    <a href="series.html">Series</a>
+    <a href="trailers.html">Trailers</a>
+    <a href="music.html">Music</a>
+    <a class="active" href="news.html">News</a>
+  </nav>
+
+  <section class="notice">
+    <div class="notice-card">
+      <div class="notice-title">Industry News</div>
+      <div class="notice-text">Breaking updates, release dates, and entertainment buzz.</div>
+      <div class="notice-actions">
+        <button>Top Stories</button>
+        <button class="ghost">Latest Updates</button>
+      </div>
+    </div>
+    <div class="notice-grid">
+      <div class="stat">
+        <div class="stat-number">58</div>
+        <div class="stat-label">Fresh stories</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Release dates</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Live updates</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="layout">
+    <section class="content">
+      <div id="noResults" class="no-results" aria-live="polite">
+        No matches found. Try a different title.
+      </div>
+      <div class="section-head">
+        <h2>Top Stories</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="list" data-search-group="news">
+        <article class="row" data-title="Crimson Harbor Sequel">
+          <div class="thumb t1"></div>
+          <div class="row-body">
+            <div class="row-title">Crimson Harbor Sequel Starts Filming</div>
+            <div class="row-meta">Studio Update - 2 min read</div>
+            <div class="row-actions">
+              <button>Read</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">HOT</div>
+        </article>
+
+        <article class="row" data-title="Pulse City Renewal">
+          <div class="thumb t2"></div>
+          <div class="row-body">
+            <div class="row-title">Pulse City Renewed for Season 3</div>
+            <div class="row-meta">Series News - 3 min read</div>
+            <div class="row-actions">
+              <button>Read</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">NEW</div>
+        </article>
+
+        <article class="row" data-title="Trailer Awards">
+          <div class="thumb t3"></div>
+          <div class="row-body">
+            <div class="row-title">Trailer Awards Spotlight 2026</div>
+            <div class="row-meta">Event - 4 min read</div>
+            <div class="row-actions">
+              <button>Read</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">TREND</div>
+        </article>
+      </div>
+
+      <div class="section-head">
+        <h2>Quick Updates</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="grid" data-search-group="updates">
+        <article class="card" data-title="Atlas Core Release">
+          <div class="poster p1"></div>
+          <div class="card-body">
+            <div class="card-title">Atlas Core Release Date Announced</div>
+            <div class="card-meta">Movie News - 1 min read</div>
+            <div class="card-actions">
+              <button>Read</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-title="Neon Waves Tour">
+          <div class="poster p2"></div>
+          <div class="card-body">
+            <div class="card-title">Neon Waves World Tour Kicks Off</div>
+            <div class="card-meta">Music News - 2 min read</div>
+            <div class="card-actions">
+              <button>Read</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-title="Forest Wardens Finale">
+          <div class="poster p3"></div>
+          <div class="card-body">
+            <div class="card-title">Forest Wardens Finale Preview</div>
+            <div class="card-meta">Series News - 2 min read</div>
+            <div class="card-actions">
+              <button>Read</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="side-card">
+        <div class="side-title">Topics</div>
+        <div class="chips">
+          <a href="#">Releases</a>
+          <a href="#">Awards</a>
+          <a href="#">Streaming</a>
+          <a href="#">Celebrity</a>
+          <a href="#">Soundtracks</a>
+          <a href="#">Box Office</a>
+          <a href="#">Series</a>
+          <a href="#">Interviews</a>
+        </div>
+      </div>
+
+      <div class="side-card" data-search-group="top-downloads">
+        <div class="side-title">Top Downloads</div>
+        <div class="side-list">
+          <div class="side-item" data-title="Noir Signal">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Noir Signal</div>
+              <div class="side-meta">Update - 1 min read</div>
+            </div>
+          </div>
+          <div class="side-item" data-title="Vast Tide">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Vast Tide</div>
+              <div class="side-meta">Update - 1 min read</div>
+            </div>
+          </div>
+          <div class="side-item" data-title="Arc Lane">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Arc Lane</div>
+              <div class="side-meta">Update - 1 min read</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <div class="side-title">Newsletter</div>
+        <p class="side-text">Get weekly drops and curated downloads.</p>
+        <div class="side-form">
+          <input type="email" placeholder="Email address" />
+          <button>Join</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div>(c) 2026 Anflix. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">DMCA</a>
+      <a href="#">Contact</a>
+      <a href="#">Advertise</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

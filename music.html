@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anflix | Music</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="assets/logo.svg" alt="Anflix logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Anflix</div>
+        <div class="brand-tag">Stream - Download</div>
+      </div>
+    </div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Search music videos, albums..." aria-label="Search" />
+      <button id="searchButton" type="button">Search</button>
+    </div>
+    <div class="quick-links"></div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="series.html">Series</a>
+    <a href="trailers.html">Trailers</a>
+    <a class="active" href="music.html">Music</a>
+  </nav>
+
+  <section class="notice">
+    <div class="notice-card">
+      <div class="notice-title">Music Studio</div>
+      <div class="notice-text">Fresh music videos, live sets, and exclusive drops.</div>
+      <div class="notice-actions">
+        <button>Top Videos</button>
+        <button class="ghost">New Releases</button>
+      </div>
+    </div>
+    <div class="notice-grid">
+      <div class="stat">
+        <div class="stat-number">540</div>
+        <div class="stat-label">New tracks</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">32</div>
+        <div class="stat-label">Live sessions</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">8.1M</div>
+        <div class="stat-label">Total plays</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="layout">
+    <section class="content">
+      <div id="noResults" class="no-results" aria-live="polite">
+        No matches found. Try a different title.
+      </div>
+      <div class="section-head">
+        <h2>Latest Music Videos</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="list" data-search-group="music-videos">
+        <article class="row" data-title="Neon Waves">
+          <div class="thumb t1"></div>
+          <div class="row-body">
+            <div class="row-title">Neon Waves - Aurora</div>
+            <div class="row-meta">3m 12s - HD</div>
+            <div class="row-actions">
+              <button>Play</button>
+              <button class="ghost">Download</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">HOT</div>
+        </article>
+
+        <article class="row" data-title="Golden Hour">
+          <div class="thumb t2"></div>
+          <div class="row-body">
+            <div class="row-title">Golden Hour - Lume</div>
+            <div class="row-meta">3m 48s - HD</div>
+            <div class="row-actions">
+              <button>Play</button>
+              <button class="ghost">Download</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">NEW</div>
+        </article>
+
+        <article class="row" data-title="City Bloom">
+          <div class="thumb t3"></div>
+          <div class="row-body">
+            <div class="row-title">City Bloom - Kael</div>
+            <div class="row-meta">4m 01s - HD</div>
+            <div class="row-actions">
+              <button>Play</button>
+              <button class="ghost">Download</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+          <div class="row-badge">TREND</div>
+        </article>
+      </div>
+
+      <div class="section-head">
+        <h2>Featured Playlists</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="grid" data-search-group="playlists">
+        <article class="card" data-title="Night Drive">
+          <div class="poster p1"></div>
+          <div class="card-body">
+            <div class="card-title">Night Drive</div>
+            <div class="card-meta">18 tracks - 1h 04m</div>
+            <div class="card-actions">
+              <button>Play</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-title="Sunrise Chill">
+          <div class="poster p2"></div>
+          <div class="card-body">
+            <div class="card-title">Sunrise Chill</div>
+            <div class="card-meta">14 tracks - 52m</div>
+            <div class="card-actions">
+              <button>Play</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-title="Studio Focus">
+          <div class="poster p3"></div>
+          <div class="card-body">
+            <div class="card-title">Studio Focus</div>
+            <div class="card-meta">22 tracks - 1h 18m</div>
+            <div class="card-actions">
+              <button>Play</button>
+              <button class="ghost">Save</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="side-card">
+        <div class="side-title">Genres</div>
+        <div class="chips">
+          <a href="#">Afrobeats</a>
+          <a href="#">Pop</a>
+          <a href="#">Hip-Hop</a>
+          <a href="#">R&B</a>
+          <a href="#">House</a>
+          <a href="#">Gospel</a>
+          <a href="#">Alt</a>
+          <a href="#">Instrumental</a>
+        </div>
+      </div>
+
+      <div class="side-card" data-search-group="top-downloads">
+        <div class="side-title">Top Downloads</div>
+        <div class="side-list">
+          <div class="side-item" data-title="Noir Signal">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Noir Signal</div>
+              <div class="side-meta">MP3 - 9MB</div>
+            </div>
+          </div>
+          <div class="side-item" data-title="Vast Tide">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Vast Tide</div>
+              <div class="side-meta">MP3 - 11MB</div>
+            </div>
+          </div>
+          <div class="side-item" data-title="Arc Lane">
+            <div class="mini"></div>
+            <div>
+              <div class="side-name">Arc Lane</div>
+              <div class="side-meta">MP3 - 8MB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <div class="side-title">Newsletter</div>
+        <p class="side-text">Get weekly drops and curated downloads.</p>
+        <div class="side-form">
+          <input type="email" placeholder="Email address" />
+          <button>Join</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div>(c) 2026 Anflix. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">DMCA</a>
+      <a href="#">Contact</a>
+      <a href="#">Advertise</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
