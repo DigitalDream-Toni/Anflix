@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anflix | Upcoming</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="preloader">
+    <div class="preloader-inner">
+      <img src="../assets/logo.svg" alt="Anflix logo" />
+      <div class="preloader-name">Anflix</div>
+    </div>
+  </div>
+  <div class="bg-glow"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="../assets/logo.svg" alt="Anflix logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Anflix</div>
+        <div class="brand-tag">Stream - Download</div>
+      </div>
+    </div>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Search upcoming titles..." aria-label="Search" />
+      <button id="searchButton" type="button">Search</button>
+    </div>
+    <div class="quick-links"></div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="../index.html">Home</a>
+    <a href="../Pages/movies.html">Movies</a>
+    <a href="../Pages/series.html">Series</a>
+    <a href="../Pages/trailers.html">Trailers</a>
+  </nav>
+
+  <section class="notice">
+    <div class="notice-card">
+      <div class="notice-title">Upcoming Movies & Series</div>
+      <div class="notice-text">Fresh releases, new seasons, and premieres on the way.</div>
+      <div class="notice-actions">
+        <button>Get Alerts</button>
+        <button class="ghost">Top Picks</button>
+      </div>
+    </div>
+    <div class="notice-grid">
+      <div class="stat">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Upcoming titles</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6</div>
+        <div class="stat-label">New seasons</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Movie premieres</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="home">
+    <div id="noResults" class="no-results" aria-live="polite">
+      No matches found. Try a different title.
+    </div>
+
+    <div class="section-head">
+      <h2>Coming Soon</h2>
+      <a href="#">Updated daily</a>
+    </div>
+    <section class="upcoming-grid" data-search-group="upcoming">
+      <article class="row" data-title="Shadow District">
+        <div class="thumb t2"></div>
+        <div class="row-body">
+          <div class="row-title">Shadow District (Movie)</div>
+          <div class="row-meta">Coming Soon - HD</div>
+          <div class="row-actions">
+            <button>Trailer</button>
+            <button class="ghost">Notify</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Northern Lights">
+        <div class="thumb t1"></div>
+        <div class="row-body">
+          <div class="row-title">Northern Lights (Series)</div>
+          <div class="row-meta">Season 1 - Coming Soon</div>
+          <div class="row-actions">
+            <button>Trailer</button>
+            <button class="ghost">Notify</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Crimson Tide: Origins">
+        <div class="thumb t3"></div>
+        <div class="row-body">
+          <div class="row-title">Crimson Tide: Origins (Movie)</div>
+          <div class="row-meta">Releasing Soon - HD</div>
+          <div class="row-actions">
+            <button>Trailer</button>
+            <button class="ghost">Notify</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Echoes of Tomorrow">
+        <div class="thumb t1"></div>
+        <div class="row-body">
+          <div class="row-title">Echoes of Tomorrow (Series)</div>
+          <div class="row-meta">Season 1 - Coming Soon</div>
+          <div class="row-actions">
+            <button>Trailer</button>
+            <button class="ghost">Notify</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Iron Harbor">
+        <div class="thumb t2"></div>
+        <div class="row-body">
+          <div class="row-title">Iron Harbor (Movie)</div>
+          <div class="row-meta">Releasing Soon - HD</div>
+          <div class="row-actions">
+            <button>Trailer</button>
+            <button class="ghost">Notify</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="City of Glass">
+        <div class="thumb t3"></div>
+        <div class="row-body">
+          <div class="row-title">City of Glass (Series)</div>
+          <div class="row-meta">Season 2 - Coming Soon</div>
+          <div class="row-actions">
+            <button>Trailer</button>
+            <button class="ghost">Notify</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>(c) 2026 Anflix. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="../Pages/contact.html">Contact</a>
+      <a href="../Pages/contact.html">Advertise</a>
+      <a href="../privacy.pdf">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

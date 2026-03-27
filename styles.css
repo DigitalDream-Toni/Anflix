@@ -308,6 +308,12 @@ body.loaded .preloader {
   gap: 16px;
 }
 
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .row {
   background: var(--card);
   border: 1px solid var(--border);
@@ -436,6 +442,10 @@ body.loaded .preloader {
 
 .poster-series {
   background-image: url("images/Movies series.jpg");
+}
+
+.poster-trailers {
+  background-image: url("images/Trailer.jpg");
 }
 
 .card-body {
@@ -860,6 +870,9 @@ body.loaded .preloader {
     grid-template-columns: 1fr;
   }
   .popular-grid {
+    grid-template-columns: 1fr;
+  }
+  .upcoming-grid {
     grid-template-columns: 1fr;
   }
   .footer {
