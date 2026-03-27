@@ -266,6 +266,12 @@ body {
   gap: 14px;
 }
 
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .row {
   background: var(--card);
   border: 1px solid var(--border);
@@ -278,6 +284,22 @@ body {
   position: relative;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rank-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
 
 .row:hover {
@@ -332,6 +354,7 @@ body {
   background: var(--brand);
   padding: 6px 4px;
   border-radius: 8px;
+  display: none;
 }
 
 .grid {
@@ -354,14 +377,26 @@ body {
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.35);
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .poster {
   height: 180px;
   background: linear-gradient(135deg, #1b2c44, #0f1b2a);
+  background-size: cover;
+  background-position: center;
 }
 
 .p1 { background: linear-gradient(135deg, #1b6fc8, #0f3f73); }
 .p2 { background: linear-gradient(135deg, #2a8cf0, #145aa0); }
 .p3 { background: linear-gradient(135deg, #1f5aa6, #0f2f57); }
+
+.poster-movies {
+  background-image: url("images/movie-posters-wallpapers.jpg");
+}
 
 .card-body {
   padding: 14px;
@@ -1272,6 +1307,9 @@ body {
   }
   .home-panels,
   .home-strip {
+    grid-template-columns: 1fr;
+  }
+  .popular-grid {
     grid-template-columns: 1fr;
   }
   .footer {

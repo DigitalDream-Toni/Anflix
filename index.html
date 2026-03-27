@@ -64,95 +64,174 @@
       No matches found. Try a different title.
     </div>
 
-    <section class="home-hero">
-      <div class="home-hero-text">
-        <div class="home-kicker">All-in-one entertainment hub</div>
-        <h1>Stream big, discover fast, save what matters.</h1>
-        <p>Movies, series, trailers, and music — organized for speed and built for binge.</p>
-        <div class="home-hero-actions">
-          <button>Start Watching</button>
-          <button class="ghost">Explore Categories</button>
-        </div>
-      </div>
-      <div class="home-hero-panel" data-title="Today Highlight">
-        <div class="home-hero-card">
-          <div class="home-hero-label">Today Highlight</div>
-          <div class="home-hero-title">Crimson Harbor</div>
-          <div class="home-hero-meta">Action - 2h 11m - HD</div>
-          <div class="home-hero-actions">
+    <div class="section-head">
+      <h2>Explore Sections</h2>
+    </div>
+    <section class="grid" data-search-group="samples">
+      <a class="card-link" href="Pages/movies.html">
+        <article class="card" data-title="Movies">
+          <div class="poster poster-movies"></div>
+          <div class="card-body">
+            <div class="card-title">Movies</div>
+            <div class="card-meta">Latest releases and classics</div>
+          </div>
+        </article>
+      </a>
+      <a class="card-link" href="Pages/series.html">
+        <article class="card" data-title="Series">
+          <div class="poster p2"></div>
+          <div class="card-body">
+            <div class="card-title">Series</div>
+            <div class="card-meta">Seasons, episodes, and highlights</div>
+          </div>
+        </article>
+      </a>
+      <a class="card-link" href="Pages/music.html">
+        <article class="card" data-title="Music">
+          <div class="poster p1"></div>
+          <div class="card-body">
+            <div class="card-title">Music</div>
+            <div class="card-meta">Videos, playlists, and live sets</div>
+          </div>
+        </article>
+      </a>
+    </section>
+
+    <div class="section-head">
+      <h2>Popular Movies</h2>
+      <a href="#">See all</a>
+    </div>
+    <section class="popular-grid" data-search-group="popular-movies">
+      <article class="row" data-title="Crimson Harbor">
+        <div class="rank-number">1</div>
+        <div class="thumb t1"></div>
+        <div class="row-body">
+          <div class="row-title">Crimson Harbor (2026)</div>
+          <div class="row-meta">Action - HD</div>
+          <div class="row-actions">
             <button>Stream</button>
-            <button class="ghost">Save</button>
+            <button class="ghost">Download</button>
           </div>
         </div>
-        <div class="home-hero-mosaic">
-          <div class="mosaic-tile t1"></div>
-          <div class="mosaic-tile t2"></div>
-          <div class="mosaic-tile t3"></div>
+      </article>
+      <article class="row" data-title="Glass Orbit">
+        <div class="rank-number">2</div>
+        <div class="thumb t2"></div>
+        <div class="row-body">
+          <div class="row-title">Glass Orbit (2026)</div>
+          <div class="row-meta">Sci-Fi - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
         </div>
-      </div>
+      </article>
+      <article class="row" data-title="Riverlight">
+        <div class="rank-number">3</div>
+        <div class="thumb t3"></div>
+        <div class="row-body">
+          <div class="row-title">Riverlight (2025)</div>
+          <div class="row-meta">Drama - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Atlas Core">
+        <div class="rank-number">4</div>
+        <div class="thumb t2"></div>
+        <div class="row-body">
+          <div class="row-title">Atlas Core (2026)</div>
+          <div class="row-meta">Thriller - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Signal North">
+        <div class="rank-number">5</div>
+        <div class="thumb t1"></div>
+        <div class="row-body">
+          <div class="row-title">Signal North (2026)</div>
+          <div class="row-meta">Action - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
+        </div>
+      </article>
+      <article class="row" data-title="Noir Signal">
+        <div class="rank-number">6</div>
+        <div class="thumb t3"></div>
+        <div class="row-body">
+          <div class="row-title">Noir Signal (2026)</div>
+          <div class="row-meta">Mystery - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="home-panels" data-search-group="hubs">
-      <article class="panel" data-title="Movies Hub">
-        <div class="panel-title">Movies Hub</div>
-        <div class="panel-text">Blockbusters, classics, and new releases every day.</div>
-        <button>Explore Movies</button>
+    <div class="section-head">
+      <h2>Trending Movies</h2>
+      <a href="#">See all</a>
+    </div>
+    <section class="list" data-search-group="trending-movies">
+      <article class="row" data-title="Atlas Core">
+        <div class="thumb t2"></div>
+        <div class="row-body">
+          <div class="row-title">Atlas Core (2026)</div>
+          <div class="row-meta">Thriller - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
+        </div>
       </article>
-      <article class="panel" data-title="Series Hub">
-        <div class="panel-title">Series Hub</div>
-        <div class="panel-text">Fresh episodes, complete seasons, and exclusives.</div>
-        <button>Explore Series</button>
-      </article>
-      <article class="panel" data-title="Trailers Hub">
-        <div class="panel-title">Trailers Hub</div>
-        <div class="panel-text">Teasers, official trailers, and first looks.</div>
-        <button>Explore Trailers</button>
-      </article>
-      <article class="panel" data-title="Music Hub">
-        <div class="panel-title">Music Hub</div>
-        <div class="panel-text">Music videos, live sets, and curated playlists.</div>
-        <button>Explore Music</button>
+      <article class="row" data-title="Signal North">
+        <div class="thumb t1"></div>
+        <div class="row-body">
+          <div class="row-title">Signal North (2026)</div>
+          <div class="row-meta">Action - HD</div>
+          <div class="row-actions">
+            <button>Stream</button>
+            <button class="ghost">Download</button>
+          </div>
+        </div>
       </article>
     </section>
 
-    <section class="home-strip">
-      <div class="strip-card" data-title="Pulse City">
-        <div class="strip-title">Pulse City</div>
-        <div class="strip-meta">Series - S02E07</div>
-      </div>
-      <div class="strip-card" data-title="Neon Waves">
-        <div class="strip-title">Neon Waves</div>
-        <div class="strip-meta">Music - 3m 12s</div>
-      </div>
-      <div class="strip-card" data-title="Glass Orbit">
-        <div class="strip-title">Glass Orbit</div>
-        <div class="strip-meta">Movie - 1h 58m</div>
-      </div>
-      <div class="strip-card" data-title="Riverlight">
-        <div class="strip-title">Riverlight</div>
-        <div class="strip-meta">Movie - 2h 02m</div>
-      </div>
-    </section>
-
-    <section class="home-collections">
-      <div class="collection">
-        <div class="collection-title">Your Queue</div>
-        <div class="collection-list" data-search-group="queue">
-          <div class="collection-item" data-title="Arc Lane">Arc Lane</div>
-          <div class="collection-item" data-title="Midnight Lines">Midnight Lines</div>
-          <div class="collection-item" data-title="Forest Wardens">Forest Wardens</div>
-          <div class="collection-item" data-title="Atlas Core">Atlas Core</div>
+    <div class="section-head">
+      <h2>Trending Music</h2>
+      <a href="#">See all</a>
+    </div>
+    <section class="list" data-search-group="trending-music">
+      <article class="row" data-title="Neon Waves">
+        <div class="thumb t1"></div>
+        <div class="row-body">
+          <div class="row-title">Neon Waves - Aurora</div>
+          <div class="row-meta">HD</div>
+          <div class="row-actions">
+            <button>Play</button>
+            <button class="ghost">Download</button>
+          </div>
         </div>
-      </div>
-      <div class="collection">
-        <div class="collection-title">Top Downloads</div>
-        <div class="collection-list" data-search-group="downloads">
-          <div class="collection-item" data-title="Noir Signal">Noir Signal</div>
-          <div class="collection-item" data-title="Vast Tide">Vast Tide</div>
-          <div class="collection-item" data-title="Signal North">Signal North</div>
-          <div class="collection-item" data-title="City Bloom">City Bloom</div>
+      </article>
+      <article class="row" data-title="Golden Hour">
+        <div class="thumb t2"></div>
+        <div class="row-body">
+          <div class="row-title">Golden Hour - Lume</div>
+          <div class="row-meta">HD</div>
+          <div class="row-actions">
+            <button>Play</button>
+            <button class="ghost">Download</button>
+          </div>
         </div>
-      </div>
+      </article>
     </section>
   </main>
 
@@ -169,4 +248,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
