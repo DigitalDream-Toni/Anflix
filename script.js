@@ -12,6 +12,75 @@ window.addEventListener("load", () => {
   }
 });
 
+const welcomeTrack = document.querySelector(".welcome-track");
+let welcomeSlides = document.querySelectorAll(".welcome-slide");
+const welcomePrev = document.querySelector(".welcome-btn.prev");
+const welcomeNext = document.querySelector(".welcome-btn.next");
+let welcomeIndex = 0;
+let welcomeTimer;
+
+const updateWelcomeCarousel = () => {
+  if (!welcomeTrack || welcomeSlides.length === 0) return;
+  const offset = welcomeIndex * 100;
+  welcomeTrack.style.transform = `translateX(-${offset}%)`;
+};
+
+const goWelcomeNext = () => {
+  welcomeIndex = (welcomeIndex + 1) % welcomeSlides.length;
+  updateWelcomeCarousel();
+};
+
+const goWelcomePrev = () => {
+  welcomeIndex = (welcomeIndex - 1 + welcomeSlides.length) % welcomeSlides.length;
+  updateWelcomeCarousel();
+};
+
+const startWelcomeCarousel = () => {
+  clearInterval(welcomeTimer);
+  welcomeTimer = setInterval(goWelcomeNext, 5000);
+};
+
+if (welcomeTrack && welcomeSlides.length > 0) {
+  // Create seamless loop by cloning first and last slides
+  const firstClone = welcomeSlides[0].cloneNode(true);
+  const lastClone = welcomeSlides[welcomeSlides.length - 1].cloneNode(true);
+  firstClone.classList.add("clone");
+  lastClone.classList.add("clone");
+  welcomeTrack.appendChild(firstClone);
+  welcomeTrack.insertBefore(lastClone, welcomeSlides[0]);
+  welcomeSlides = document.querySelectorAll(".welcome-slide");
+  welcomeIndex = 1;
+  updateWelcomeCarousel();
+
+  welcomeTrack.addEventListener("transitionend", () => {
+    const current = welcomeSlides[welcomeIndex];
+    if (current && current.classList.contains("clone")) {
+      welcomeTrack.style.transition = "none";
+      if (welcomeIndex === 0) {
+        welcomeIndex = welcomeSlides.length - 2;
+      } else if (welcomeIndex === welcomeSlides.length - 1) {
+        welcomeIndex = 1;
+      }
+      updateWelcomeCarousel();
+      requestAnimationFrame(() => {
+        welcomeTrack.style.transition = "transform 0.6s ease";
+      });
+    }
+  });
+
+  if (welcomePrev && welcomeNext) {
+    welcomePrev.addEventListener("click", () => {
+      goWelcomePrev();
+      startWelcomeCarousel();
+    });
+    welcomeNext.addEventListener("click", () => {
+      goWelcomeNext();
+      startWelcomeCarousel();
+    });
+  }
+  startWelcomeCarousel();
+}
+
 
 const normalize = (value) => value.toLowerCase().trim();
 
