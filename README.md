@@ -4,17 +4,18 @@ Static multi-page frontend for Anflix with unique layouts per section.
 
 ## Pages
 - `index.html` (Home)
-- `movies.html`
-- `series.html`
-- `trailers.html`
-- `music.html`
+- `Pages/movies.html`
+- `Pages/series.html`
+- `Pages/trailers.html`
+- `Pages/music.html`
+- `Pages/news.html`
 
 ## Assets
 - `assets/logo.svg`
 - `assets/favicon.svg`
 
 ## Run Locally
-Open any page directly in your browser (no build step required).
+Open `index.html` directly in your browser (no build step required).
 
 ## Search
 The search box filters cards/tiles on the current page and highlights matches.

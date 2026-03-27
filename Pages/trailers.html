@@ -1,18 +1,18 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anflix | News</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Anflix | Trailers</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <div class="bg-glow"></div>
   <header class="topbar">
     <div class="brand">
       <div class="brand-mark">
-        <img src="assets/logo.svg" alt="Anflix logo" />
+        <img src="../assets/logo.svg" alt="Anflix logo" />
       </div>
       <div class="brand-text">
         <div class="brand-name">Anflix</div>
@@ -20,41 +20,41 @@
       </div>
     </div>
     <div class="search">
-      <input id="searchInput" type="search" placeholder="Search news..." aria-label="Search" />
+      <input id="searchInput" type="search" placeholder="Search trailers..." aria-label="Search" />
       <button id="searchButton" type="button">Search</button>
     </div>
     <div class="quick-links"></div>
   </header>
 
   <nav class="main-nav">
-    <a href="index.html">Movies</a>
-    <a href="series.html">Series</a>
-    <a href="trailers.html">Trailers</a>
-    <a href="music.html">Music</a>
-    <a class="active" href="news.html">News</a>
+    <a href="../index.html">Home</a>
+    <a href="../Pages/movies.html">Movies</a>
+    <a href="../Pages/series.html">Series</a>
+    <a class="active" href="../Pages/trailers.html">Trailers</a>
+    <a href="../Pages/music.html">Music</a>
   </nav>
 
   <section class="notice">
     <div class="notice-card">
-      <div class="notice-title">Industry News</div>
-      <div class="notice-text">Breaking updates, release dates, and entertainment buzz.</div>
+      <div class="notice-title">Trailer Hub</div>
+      <div class="notice-text">Watch first looks, official teasers, and clip drops.</div>
       <div class="notice-actions">
-        <button>Top Stories</button>
-        <button class="ghost">Latest Updates</button>
+        <button>Top Trailers</button>
+        <button class="ghost">New Releases</button>
       </div>
     </div>
     <div class="notice-grid">
       <div class="stat">
-        <div class="stat-number">58</div>
-        <div class="stat-label">Fresh stories</div>
+        <div class="stat-number">120</div>
+        <div class="stat-label">New this week</div>
       </div>
       <div class="stat">
-        <div class="stat-number">12</div>
-        <div class="stat-label">Release dates</div>
+        <div class="stat-number">4K</div>
+        <div class="stat-label">Premium cuts</div>
       </div>
       <div class="stat">
-        <div class="stat-number">5</div>
-        <div class="stat-label">Live updates</div>
+        <div class="stat-number">7.4M</div>
+        <div class="stat-label">Trailer views</div>
       </div>
     </div>
   </section>
@@ -65,43 +65,46 @@
         No matches found. Try a different title.
       </div>
       <div class="section-head">
-        <h2>Top Stories</h2>
+        <h2>Featured Trailers</h2>
         <a href="#">See all</a>
       </div>
-      <div class="list" data-search-group="news">
-        <article class="row" data-title="Crimson Harbor Sequel">
+      <div class="list" data-search-group="trailers">
+        <article class="row" data-title="Shadow Run">
           <div class="thumb t1"></div>
           <div class="row-body">
-            <div class="row-title">Crimson Harbor Sequel Starts Filming</div>
-            <div class="row-meta">Studio Update - 2 min read</div>
+            <div class="row-title">Shadow Run (Official Trailer)</div>
+            <div class="row-meta">Action - 2m 18s - HD</div>
             <div class="row-actions">
-              <button>Read</button>
+              <button>Watch</button>
+              <button class="ghost">Download</button>
               <button class="ghost">Save</button>
             </div>
           </div>
           <div class="row-badge">HOT</div>
         </article>
 
-        <article class="row" data-title="Pulse City Renewal">
+        <article class="row" data-title="Glass Orbit">
           <div class="thumb t2"></div>
           <div class="row-body">
-            <div class="row-title">Pulse City Renewed for Season 3</div>
-            <div class="row-meta">Series News - 3 min read</div>
+            <div class="row-title">Glass Orbit (Teaser)</div>
+            <div class="row-meta">Sci-Fi - 1m 42s - HD</div>
             <div class="row-actions">
-              <button>Read</button>
+              <button>Watch</button>
+              <button class="ghost">Download</button>
               <button class="ghost">Save</button>
             </div>
           </div>
           <div class="row-badge">NEW</div>
         </article>
 
-        <article class="row" data-title="Trailer Awards">
+        <article class="row" data-title="Riverlight">
           <div class="thumb t3"></div>
           <div class="row-body">
-            <div class="row-title">Trailer Awards Spotlight 2026</div>
-            <div class="row-meta">Event - 4 min read</div>
+            <div class="row-title">Riverlight (Final Trailer)</div>
+            <div class="row-meta">Drama - 2m 06s - HD</div>
             <div class="row-actions">
-              <button>Read</button>
+              <button>Watch</button>
+              <button class="ghost">Download</button>
               <button class="ghost">Save</button>
             </div>
           </div>
@@ -110,39 +113,39 @@
       </div>
 
       <div class="section-head">
-        <h2>Quick Updates</h2>
+        <h2>Coming Soon</h2>
         <a href="#">See all</a>
       </div>
-      <div class="grid" data-search-group="updates">
-        <article class="card" data-title="Atlas Core Release">
+      <div class="grid" data-search-group="coming-soon">
+        <article class="card" data-title="Midnight Drift">
           <div class="poster p1"></div>
           <div class="card-body">
-            <div class="card-title">Atlas Core Release Date Announced</div>
-            <div class="card-meta">Movie News - 1 min read</div>
+            <div class="card-title">Midnight Drift</div>
+            <div class="card-meta">Trailer drops in 2 days</div>
             <div class="card-actions">
-              <button>Read</button>
+              <button>Notify Me</button>
               <button class="ghost">Save</button>
             </div>
           </div>
         </article>
-        <article class="card" data-title="Neon Waves Tour">
+        <article class="card" data-title="Atlas Core">
           <div class="poster p2"></div>
           <div class="card-body">
-            <div class="card-title">Neon Waves World Tour Kicks Off</div>
-            <div class="card-meta">Music News - 2 min read</div>
+            <div class="card-title">Atlas Core</div>
+            <div class="card-meta">Trailer drops in 5 days</div>
             <div class="card-actions">
-              <button>Read</button>
+              <button>Notify Me</button>
               <button class="ghost">Save</button>
             </div>
           </div>
         </article>
-        <article class="card" data-title="Forest Wardens Finale">
+        <article class="card" data-title="Signal North">
           <div class="poster p3"></div>
           <div class="card-body">
-            <div class="card-title">Forest Wardens Finale Preview</div>
-            <div class="card-meta">Series News - 2 min read</div>
+            <div class="card-title">Signal North</div>
+            <div class="card-meta">Trailer drops in 1 week</div>
             <div class="card-actions">
-              <button>Read</button>
+              <button>Notify Me</button>
               <button class="ghost">Save</button>
             </div>
           </div>
@@ -152,16 +155,14 @@
 
     <aside class="sidebar">
       <div class="side-card">
-        <div class="side-title">Topics</div>
+        <div class="side-title">Trailer Types</div>
         <div class="chips">
-          <a href="#">Releases</a>
-          <a href="#">Awards</a>
-          <a href="#">Streaming</a>
-          <a href="#">Celebrity</a>
-          <a href="#">Soundtracks</a>
-          <a href="#">Box Office</a>
-          <a href="#">Series</a>
-          <a href="#">Interviews</a>
+          <a href="#">Official</a>
+          <a href="#">Teaser</a>
+          <a href="#">Final</a>
+          <a href="#">Clip</a>
+          <a href="#">Behind The Scenes</a>
+          <a href="#">Featurette</a>
         </div>
       </div>
 
@@ -172,21 +173,21 @@
             <div class="mini"></div>
             <div>
               <div class="side-name">Noir Signal</div>
-              <div class="side-meta">Update - 1 min read</div>
+              <div class="side-meta">HD - 210MB</div>
             </div>
           </div>
           <div class="side-item" data-title="Vast Tide">
             <div class="mini"></div>
             <div>
               <div class="side-name">Vast Tide</div>
-              <div class="side-meta">Update - 1 min read</div>
+              <div class="side-meta">HD - 190MB</div>
             </div>
           </div>
           <div class="side-item" data-title="Arc Lane">
             <div class="mini"></div>
             <div>
               <div class="side-name">Arc Lane</div>
-              <div class="side-meta">Update - 1 min read</div>
+              <div class="side-meta">HD - 230MB</div>
             </div>
           </div>
         </div>
@@ -213,6 +214,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
+
