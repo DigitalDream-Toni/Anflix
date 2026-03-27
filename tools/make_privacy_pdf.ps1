@@ -9,6 +9,20 @@ function Esc([string]$s) {
 
 function Make-Page($title, $lines) {
   $content = @()
+  # Background and border
+  $content += '1 1 1 rg'
+  $content += '0 0 612 792 re f'
+  $content += '0.12 0.12 0.12 RG'
+  $content += '40 40 532 712 re S'
+
+  # Watermark
+  $content += '0.85 g'
+  $content += 'BT'
+  $content += '/F1 48 Tf'
+  $content += '140 400 Td'
+  $content += '(ANFLIX) Tj'
+  $content += 'ET'
+
   $content += '0.09 0.45 0.82 rg'
   $content += '0 760 612 32 re f'
   $content += '0 0 0 rg'
@@ -17,12 +31,27 @@ function Make-Page($title, $lines) {
   $content += '72 770 Td'
   $content += '(' + (Esc $title) + ') Tj'
   $content += '/F1 11 Tf'
-  $y = 730
+  $content += '0 -22 Td'
+  $content += '(Effective Date: 2026-03-27) Tj'
+  $content += 'ET'
+
+  # Header divider
+  $content += '0.09 0.45 0.82 RG'
+  $content += '72 744 m 540 744 l S'
+
+  # Body
+  $content += '0 0 0 rg'
+  $content += 'BT'
+  $content += '/F1 11 Tf'
+  $content += '0 -20 Td'
+  $content += '16 TL'
+  $content += '0 -10 Td'
+  $y = 0
   foreach ($line in $lines) {
-    $content += '72 ' + $y + ' Td'
     $content += '(' + (Esc $line) + ') Tj'
-    $y -= 16
-    if ($y -lt 80) { break }
+    $content += 'T*'
+    $y += 1
+    if ($y -gt 32) { break }
   }
   $content += 'ET'
   return ($content -join "`n")
@@ -30,7 +59,6 @@ function Make-Page($title, $lines) {
 
 $pages = @(
   @('Privacy Notice', @(
-    'Effective Date: 2026-03-27',
     'This Privacy Notice explains how the Anflix demo site handles information.',
     'This is a non-commercial demonstration project and not a payment platform.',
     'If you do not agree with this Notice, do not use the site.',
@@ -44,59 +72,25 @@ $pages = @(
     'If you contact us, we may receive your email address and message content.',
     'Any information you provide is used only to respond to your inquiry.',
     '',
-    '3. Device and Usage Data',
-    'This demo site does not deploy analytics trackers or advertising cookies.',
-    'Basic server logs may record IP address, browser type, and timestamps.',
-    'Such logs are used for security and performance monitoring only.',
+    '3. Cookies and Analytics',
+    'We do not use advertising cookies or analytics trackers.',
+    'If third-party services are added later, they may set their own cookies.',
     '',
-    '4. Cookies',
-    'We do not set marketing cookies.',
-    'If embedded third-party services are added later, they may set cookies.'
-  )),
-  @('Privacy Notice (continued)', @(
-    '5. Use of Information',
+    '4. Use of Information',
     'Information is used solely for support and communication.',
     'We do not sell, rent, or share personal data with third parties.',
     '',
-    '6. Legal Bases (where applicable)',
-    'We process data based on legitimate interests in responding to inquiries.',
-    'If consent is required, we will request it before processing.',
-    '',
-    '7. Data Retention',
+    '5. Data Retention and Security',
     'We retain contact messages only as long as necessary to respond and support.',
-    'We may retain minimal logs for a reasonable period for security purposes.',
-    '',
-    '8. Data Security',
     'We take reasonable measures to protect information provided to us.',
     'However, no system is completely secure; you share information at your own risk.',
     '',
-    '9. Content and Licensing',
-    'Only upload or share content you own or are licensed to use.',
-    'We do not claim ownership of user-provided content.',
+    '6. Children',
+    'This site is not directed to children and we do not knowingly collect their data.',
     '',
-    '10. International Transfers',
-    'If data is processed across borders, appropriate safeguards will be applied.'
-  )),
-  @('Privacy Notice (continued)', @(
-    '11. Children',
-    'This site is intended for general audiences and is not directed to children.',
-    'We do not knowingly collect information from children.',
-    '',
-    '12. Your Rights',
-    'Depending on your location, you may have rights to access or delete data.',
-    'To exercise these rights, contact us using the details below.',
-    '',
-    '13. Third-Party Links',
-    'Links to other sites are provided for convenience.',
-    'We are not responsible for the privacy practices of third-party sites.',
-    '',
-    '14. Changes to This Notice',
-    'We may update this Notice to reflect changes in the demo or legal requirements.',
-    'The effective date above will be updated when changes are made.',
-    '',
-    '15. Contact',
-    'For questions about this Notice, contact: privacy@anflix.com.',
-    'For general support, contact: support@anflix.com.'
+    '7. Changes and Contact',
+    'We may update this Notice; the effective date will be revised accordingly.',
+    'For questions, contact: privacy@anflix.com.'
   ))
 )
 
