@@ -814,8 +814,7 @@ body.loaded .preloader {
   }
   .movies-hero,
   .series-hero,
-  .trailers-hero,
-  .music-hero {
+  .trailers-hero {
     grid-template-columns: 1fr;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -830,9 +829,6 @@ body.loaded .preloader {
     grid-template-columns: 1fr;
   }
   .trailers-carousel {
-    grid-template-columns: 1fr;
-  }
-  .music-layout {
     grid-template-columns: 1fr;
   }
 }
