@@ -16,6 +16,7 @@ Static multi-page frontend for Anflix with unique layouts per section.
 - Popular Movies
 - Trending Movies Series
 
+
 ## Footer Links
 - Contact and Advertise link to `Pages/contact.html`
 - Privacy links to `privacy.pdf`

@@ -192,6 +192,7 @@ body.loaded .preloader {
   grid-template-columns: 2fr 1.2fr;
   gap: 22px;
   padding: 26px 8vw;
+  align-items: stretch;
 }
 
 .notice-card {
@@ -201,11 +202,16 @@ body.loaded .preloader {
   padding: 24px;
   box-shadow: var(--shadow);
   animation: rise 0.6s ease-out;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .notice-title {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 30px;
+  color: var(--ink);
 }
 
 .notice-text {

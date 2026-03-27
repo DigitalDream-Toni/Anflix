@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
   }
 });
 
+
 const normalize = (value) => value.toLowerCase().trim();
 
 const getTitleElement = (item) =>
