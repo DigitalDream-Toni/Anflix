@@ -4,6 +4,14 @@ const noResults = document.getElementById("noResults");
 
 const searchableItems = [...document.querySelectorAll("[data-title]")];
 
+const preloader = document.querySelector(".preloader");
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+  if (preloader) {
+    setTimeout(() => preloader.remove(), 450);
+  }
+});
+
 const normalize = (value) => value.toLowerCase().trim();
 
 const getTitleElement = (item) =>

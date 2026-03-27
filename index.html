@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="preloader">
+    <div class="preloader-inner">
+      <img src="assets/logo.svg" alt="Anflix logo" />
+      <div class="preloader-name">Anflix</div>
+    </div>
+  </div>
   <div class="bg-glow"></div>
   <header class="topbar">
     <div class="brand">
@@ -31,13 +37,12 @@
     <a href="Pages/movies.html">Movies</a>
     <a href="Pages/series.html">Series</a>
     <a href="Pages/trailers.html">Trailers</a>
-    <a href="Pages/music.html">Music</a>
-  </nav>
+</nav>
 
   <section class="notice">
     <div class="notice-card">
       <div class="notice-title">Welcome Back</div>
-      <div class="notice-text">Jump into movies, series, trailers, and music — all in one place.</div>
+      <div class="notice-text">Jump into movies, series, and trailers — all in one place.</div>
       <div class="notice-actions">
         <button>Start Watching</button>
         <button class="ghost">Explore Library</button>
@@ -79,23 +84,14 @@
       </a>
       <a class="card-link" href="Pages/series.html">
         <article class="card" data-title="Series">
-          <div class="poster p2"></div>
+          <div class="poster poster-series"></div>
           <div class="card-body">
             <div class="card-title">Series</div>
             <div class="card-meta">Seasons, episodes, and highlights</div>
           </div>
         </article>
       </a>
-      <a class="card-link" href="Pages/music.html">
-        <article class="card" data-title="Music">
-          <div class="poster p1"></div>
-          <div class="card-body">
-            <div class="card-title">Music</div>
-            <div class="card-meta">Videos, playlists, and live sets</div>
-          </div>
-        </article>
-      </a>
-    </section>
+</section>
 
     <div class="section-head">
       <h2>Popular Movies</h2>
@@ -205,35 +201,7 @@
       </article>
     </section>
 
-    <div class="section-head">
-      <h2>Trending Music</h2>
-      <a href="#">See all</a>
-    </div>
-    <section class="list" data-search-group="trending-music">
-      <article class="row" data-title="Neon Waves">
-        <div class="thumb t1"></div>
-        <div class="row-body">
-          <div class="row-title">Neon Waves - Aurora</div>
-          <div class="row-meta">HD</div>
-          <div class="row-actions">
-            <button>Play</button>
-            <button class="ghost">Download</button>
-          </div>
-        </div>
-      </article>
-      <article class="row" data-title="Golden Hour">
-        <div class="thumb t2"></div>
-        <div class="row-body">
-          <div class="row-title">Golden Hour - Lume</div>
-          <div class="row-meta">HD</div>
-          <div class="row-actions">
-            <button>Play</button>
-            <button class="ghost">Download</button>
-          </div>
-        </div>
-      </article>
-    </section>
-  </main>
+    </main>
 
   <footer class="footer">
     <div>(c) 2026 Anflix. All rights reserved.</div>
@@ -248,6 +216,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
